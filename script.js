@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Append the new task to the main section
     var mainSection = document.getElementsByTagName("main");
-    mainSection.appendChild(taskElement);
+    mainSection[0].appendChild(taskElement);
+    
 }
 });
