@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- require the htmx library that is installed via npm -->
+    <script src="node_modules/htmx.org/dist/htmx.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add a link to the css file -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <header>
+        <h1>Day to Day Task Manager</h1>
+
+        <div class="icons-container">
+        <!-- add an icon for adding a new task -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" id="addTask" class="icon">
+                <!-- Background Circle -->
+                <circle cx="12" cy="12" r="11" fill="#3498db" />
+            
+                <!-- Plus Icon -->
+                <path d="M17 11h-4v-4c0-0.55-0.45-1-1-1s-1 0.45-1 1v4h-4c-0.55 0-1 0.45-1 1s0.45 1 1 1h4v4c0 0.55 0.45 1 1 1s1-0.45 1-1v-4h4c0.55 0 1-0.45 1-1s-0.45-1-1-1z" fill="#fff"/>
+            </svg>
+            <!-- modal for adding a new task -->
+            <div id="addTaskModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+            
+                    <span class="close">&times;</span>
+                    <h2>Add a Task</h2>
+                    <form id="taskForm">
+                
+                        <label for="task">Enter a task:</label>
+                        <input type="text" id="taskName" name="task"><br>
+                
+                        <label for="description">Enter a description:</label>
+                        <input type="text" id="taskDescription" name="description"><br>
+                
+                        <label for="date">Enter a date:</label>
+                        <input type="date" id="taskDueDate" name="date"><br>
+                        
+                        <label for="time">Enter a time:</label>
+                        <input type="time" id="taskDueTime" name="time"><br>
+                        
+                        <input type="submit" value="Submit">
+                
+                    </form>
+            
+                </div>
+            
+            </div>
+        
+            <!--add an icon for searching tasks -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" id="searchTask" class="icon">
+                <!-- Background Circle -->
+                <circle cx="12" cy="12" r="11" fill="#3498db" />
+            
+                <!-- Search Icon -->
+                <path d="M17.54 16.47l-1.41-1.41-0.01 0.01c1.26-1.56 2-3.51 2-5.66 0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c2.15 0 4.1-0.74 5.66-2l0.01 0.01 1.41 1.41c0.78 0.78 2.05 0.78 2.83 0 0.78-0.78 0.78-2.05 0-2.83zM10 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="#fff"/>
+            </svg>
+            <!-- add an icon for sorting tasks -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" id="sortTasks" class="icon">
+                <!-- Background Circle -->
+                <circle cx="12" cy="12" r="11" fill="#3498db" />
+            
+                <!-- Sort Icon (Arrows) -->
+                <g fill="#fff">
+                    <polygon points="12 4 16 10 8 10" />
+                    <polygon points="12 20 16 14 8 14" />
+                </g>
+            </svg>
+        </div>                
+    </header>
+    <main>
+        <!-- display all tacks -->
+       
+    </main>
+    
+    <script src="./script.js"></script>        
+</body>
+</html>
